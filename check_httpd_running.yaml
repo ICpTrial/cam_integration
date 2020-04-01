@@ -1,4 +1,8 @@
-- name: Start service httpd, if not started
-  service:
-    name: httpd
-    state: started
+- hosts: all
+  sudo: yes
+  tasks:
+
+  - name: Start service httpd, if not started
+    service:
+      name: httpd
+      state: started
